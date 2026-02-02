@@ -8,6 +8,8 @@ Index: Lab
 
 2 [ML_Exp_2.py](Lab/ML_Exp_2.py) -> Performed House Price Prediction with XGBoost regression for Kaggle Competition
 
+2 [ML_Exp_3_WpAnalysis](Lab/ML_Exp_3_WpAnalysis) -> Performed Whatsapp chat data analysis and visualization using Python
+
 ---
 
 `Theory Folder`  has all the tasks assigned in Theory Sessions
