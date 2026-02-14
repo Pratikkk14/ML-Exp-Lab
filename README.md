@@ -10,7 +10,10 @@ Index: Lab
 
 3 [ML_Exp_3_WpAnalysis](Lab/ML_Exp_3_WpAnalysis) -> Performed Whatsapp chat data analysis and visualization using Python
 
-4 [ML_Exp_4.ipynb](Lab/ML_Exp_4.ipynb) 
+4 [ML_Exp_4.ipynb](Lab/ML_Exp_4.ipynb)   
+  
+5 [ML_Exp_5.ipynb](Lab/ML_Exp_5.ipynb) -> Kaggle Playground Competiton 2026 for predicting heart disease risk. Performed following on the dataset: 
+Data preprocessing, Exploratory Data Analysis (EDA), feature engineering on tabular healthcare data, Stratified K-Fold Cross Validation, comparison of boosting models (XGBoost, LightGBoost, CatBoost), log-loss based evaluation, and ensembling/blending techniques for improved generalization
 
 ---
 
