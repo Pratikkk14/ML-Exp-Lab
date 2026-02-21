@@ -15,6 +15,8 @@ Index: Lab
 5 [ML_Exp_5.ipynb](Lab/ML_Exp_5.ipynb) -> Kaggle Playground Competiton 2026 for predicting heart disease risk. Performed following on the dataset: 
 Data preprocessing, Exploratory Data Analysis (EDA), feature engineering on tabular healthcare data, Stratified K-Fold Cross Validation, comparison of boosting models (XGBoost, LightGBoost, CatBoost), log-loss based evaluation, and ensembling/blending techniques for improved generalization
 
+6 [ML_Exp_6.ipynb](Lab/ML_Exp_6.ipynb) -> Performed Exploratory Data Analysis (EDA) on Olympic dataset, including data preprocessing, visualization of trends in participating nations and events over time, country-wise medal
+
 ---
 
 `Theory Folder`  has all the tasks assigned in Theory Sessions
