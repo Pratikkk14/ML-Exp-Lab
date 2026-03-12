@@ -17,6 +17,8 @@ Data preprocessing, Exploratory Data Analysis (EDA), feature engineering on tabu
 
 6 [ML_Exp_6.ipynb](Lab/ML_Exp_6.ipynb) -> Performed Exploratory Data Analysis (EDA) on Olympic dataset, including data preprocessing, visualization of trends in participating nations and events over time, country-wise medal
 
+8 [ML_Exp_8.ipynb](Lab/ML_Exp_8.ipynb) -> The MNIST digit dataset was **preprocessed** (pixel normalization), split into training and validation sets, and **multiple models** (Decision Tree, Linear SVM, and RBF SVM) were trained and evaluated using accuracy, confusion matrix, and classification report. Further analysis included **examining support vectors** and **multiclass strategy in SVM**, and performing **PCA-based dimensionality reduction** to test its effect on model performance before generating predictions for Kaggle submission.  
+
 ---
 
 `Theory Folder`  has all the tasks assigned in Theory Sessions
