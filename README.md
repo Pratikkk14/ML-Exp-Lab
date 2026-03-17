@@ -25,6 +25,16 @@ Data preprocessing, Exploratory Data Analysis (EDA), feature engineering on tabu
 
 Index: Theory
 
-1 [ML_Theory_01.ipynb](Theory/ML_Theory_01.ipynb) -> `Classification Pipeline + Generalization Error` Implemented Logistic Regression (baseline) and Decision Tree models on the UCI Breast Cancer dataset, with full ML workflow including data prep, training, evaluation, and generalization error analysis. 
+1 [ML_Theory_01.ipynb](Theory/ML_Theory_01.ipynb) -> `Classification Pipeline + Generalization Error` 
+-
+Implemented Logistic Regression (baseline) and Decision Tree models on the UCI Breast Cancer dataset, with full ML workflow including data prep, training, evaluation, and generalization error analysis. 
 
-2 [ML_Theory_03.ipynb](Theory/ML_Theory_03.ipynb) -> `Logistic Regression + Performance Metrics` Built a binary classifier using Logistic Regression on the UCI Bank Marketing dataset to predict term deposit subscription. Tasks included categorical encoding, train/test split, model training, and evaluation using confusion matrix, precision, recall, F1-score, ROC-AUC, and threshold analysis. Explained ROC curve utility and effects of threshold changes on precision–recall trade-off.
+2 [ML_Theory_03.ipynb](Theory/ML_Theory_03.ipynb) -> `Logistic Regression + Performance Metrics` 
+-
+Built a binary classifier using Logistic Regression on the UCI Bank Marketing dataset to predict term deposit subscription. Tasks included categorical encoding, train/test split, model training, and evaluation using confusion matrix, precision, recall, F1-score, ROC-AUC, and threshold analysis. Explained ROC curve utility and effects of threshold changes on precision–recall trade-off.
+
+3 [ML_Theory_06.ipynb](Theory/ML_Theory_06.ipynb) -> `Spam Detection using Ensemble Learning` 
+-
+Developed a text classification pipeline using TF-IDF vectorization and supervised learning models. Implemented and compared ensemble methods including Voting and Stacking.
+Used Stratified K-Fold cross-validation for robust evaluation.
+Analyzed performance using Precision, Recall, F1-score, and ROC-AUC.
