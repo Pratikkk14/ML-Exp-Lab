@@ -78,3 +78,30 @@ Built a binary classifier using Logistic Regression on the UCI Bank Marketing da
 Developed a text classification pipeline using TF-IDF vectorization and supervised learning models. Implemented and compared ensemble methods including Voting and Stacking.
 Used Stratified K-Fold cross-validation for robust evaluation.
 Analyzed performance using Precision, Recall, F1-score, and ROC-AUC.
+
+4 [ML_Exp_10.ipynb](Lab/ML_Exp_10(MST_Clustering).ipynb) -> ``Graph-Based Clustering (MST) + Kruskal Algorithm + Union-Find + Distance Graph Construction + Silhouette Evaluation``
+-
+
+<details>
+<summary><b>My Learnings for Graph-Based Clustering</b></summary>
+
+End-to-end graph-based clustering using Minimum Spanning Tree (MST)
+- Conversion of tabular data into weighted graphs using pairwise distances
+- Implementation of **Kruskal's Algorithm** and **Prim's Algorithm** for MST construction
+- **Union-Find** (Disjoint Set) with path compression for cycle detection
+- Structural clustering by removing (k−1) largest edges from MST
+- Visualization using PCA and comparative analysis with K-Means
+- Silhouette Score evaluation
+
+**Key Learnings:**
+- Graph Theory applications in clustering
+- Kruskal's and Prim's algorithms for MST construction
+- Union-Find data structure for efficient component tracking
+- Connectivity-based vs centroid-based clustering differences
+- MST captures non-spherical cluster shapes; K-Means assumes spherical clusters
+- Trade-offs between flexibility (MST) and speed (K-Means)
+
+**Key Takeaway:**
+Graph-based clustering with MST reveals cluster structures that traditional methods miss. Data representation through graphs enables flexible, structure-aware clustering.
+
+</details>
