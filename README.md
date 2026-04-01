@@ -19,6 +19,46 @@ Data preprocessing, Exploratory Data Analysis (EDA), feature engineering on tabu
 
 8 [ML_Exp_8.ipynb](Lab/ML_Exp_8.ipynb) -> The MNIST digit dataset was **preprocessed** (pixel normalization), split into training and validation sets, and **multiple models** (Decision Tree, Linear SVM, and RBF SVM) were trained and evaluated using accuracy, confusion matrix, and classification report. Further analysis included **examining support vectors** and **multiclass strategy in SVM**, and performing **PCA-based dimensionality reduction** to test its effect on model performance before generating predictions for Kaggle submission.  
 
+9 [ML_Exp_9.ipynb](Lab/ML_Exp_9(CustomerChurn).ipynb) -> ``CatBoost + Structured Feature Engineering + Leakage Handling + AUC Optimization`` 
+-
+
+<details>
+<summary><b>My Learnings for Customer Churn Prediction</b></summary>
+
+### What this notebook covers:
+- End-to-end customer churn prediction pipeline on telecom dataset
+- Data understanding and structured EDA to identify churn patterns
+- **Feature Engineering** focused on behavioral signals:
+    - Service usage features (num_services_used)
+    - Infrastructure flags (has_internet, has_phone, has_multiple_lines)
+    - Tenure-based segmentation (tenure_buckets)
+    - Cost-based features (avg_charge)
+    - Interaction-based features (risk_profile from contract + payment + billing)
+    - Hierarchical categorical handling (e.g., "No internet service")
+- Target leakage prevention during feature creation
+- CatBoost model training with native categorical support
+- ROC-AUC evaluation and feature importance analysis
+- End-to-end Kaggle submission pipeline
+
+### Key Learnings:
+- Systematic approach to real-world tabular ML problems
+- Feature engineering > model complexity
+- Identifying and handling hidden data structure
+- ROC-AUC focuses on ranking, not exact probabilities
+- Interaction features significantly impact predictions
+- Recognizing and preventing target leakage
+- CatBoost advantages for categorical-heavy datasets
+- Train-test consistency in pipelines
+- Stratified validation for imbalanced data
+
+### Key Takeaway:
+**Strong feature engineering + correct problem understanding > complex models**
+
+A well-structured tabular pipeline with CatBoost achieves competitive performance without heavy ensembling.
+
+</details>
+
+
 ---
 
 `Theory Folder`  has all the tasks assigned in Theory Sessions
