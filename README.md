@@ -13,46 +13,222 @@
 
 
 
-## **1. Titanic Survival Prediction** -> [ML_Exp_1](Lab/ML_Exp_1.ipynb)  
-Performed Titanic Survival Prediction for Kaggle Competition
+## **1. Titanic: Machine Learning from Disaster** -> [ML_Exp_1](Lab/ML_Exp_1.ipynb)
+
+### 🔹 **Classification Pipeline + Missing Value Handling + Categorical Encoding + Random Forest**
+
+<details>
+<summary><b>📌 My Learnings for Classification Workflows</b></summary>
+
+### 📖 What this notebook covers:
+- Titanic survival prediction (Kaggle competition)
+- Feature selection and data preparation
+- Missing value handling (median for Age, mode for Embarked)
+- Categorical encoding using LabelEncoder (Sex, Embarked)
+- Random Forest classification (100 estimators)
+- Train/test workflow (Kaggle train/test split)
+- Prediction and submission generation
+
+### 🧠 Key Learnings:
+- Feature selection is crucial before model training
+- Different missing value strategies for different columns
+- LabelEncoder properly transforms categorical features for tree models
+- Separating train and test data is essential
+- Random Forest provides good baseline without extensive tuning
+- Consistent preprocessing on both train and test sets
+- Kaggle competitions provide realistic ML end-to-end workflow
+
+### 🎯 Key Takeaway:
+**Clean data + thoughtful preprocessing + simple models = strong baseline. Mastering fundamentals beats searching for perfect algorithms.**
+
+</details>
 
 
 
-## **2. House Price Prediction (XGBoost)** -> [ML_Exp_2](Lab/ML_Exp_2.py)  
-Performed House Price Prediction using XGBoost Regression
+## **2. House Prices: Advanced Regression Techniques** -> [ML_Exp_2](Lab/ML_Exp_2.py)
+
+### 🔹 **Regression + Feature Engineering + XGBoost + K-Fold CV + Target Encoding**
+
+<details>
+<summary><b>📌 My Learnings for Regression & XGBoost</b></summary>
+
+### 📖 What this notebook covers:
+- House price prediction (Kaggle competition)
+- Outlier removal and log transformation (SalePrice normalization)
+- Strategic missing value handling (None-filling, groupby median, mode imputation)
+- Feature engineering: TotalSF (area aggregation), HouseAge, RemodAge (temporal features)
+- One-hot encoding for categorical variables
+- 5-fold cross-validation with KFold for robust evaluation
+- XGBoost regressor (2500 estimators, tuned hyperparameters)
+- Performance tracking: RMSE per fold and mean CV RMSE
+- Visualizations: price distributions, feature importance, predicted vs actual
+- Inverse log transform for final predictions
+
+### 🧠 Key Learnings:
+- Log transformation normalizes skewed target distributions
+- Thoughtful missing value strategies improve model robustness
+- Feature engineering (aggregations, temporal features) drives performance
+- 5-fold CV provides reliable performance estimates
+- XGBoost hyperparameters (learning_rate, max_depth, subsample) significantly impact results
+- Feature importance reveals which features drive predictions
+- Predicted vs actual plots reveal systematic biases
+- Inverse transforms restore interpretability to log-scaled predictions
+
+### 🎯 Key Takeaway:
+**Smart feature engineering + cross-validation + XGBoost tuning create production-grade regression pipelines. Domain knowledge in feature creation matters more than model selection.**
+
+</details>
 
 
 
-## **3. WhatsApp Chat Analysis** -> [ML_Exp_3_WpAnalysis](Lab/ML_Exp_3_WpAnalysis)  
-Performed WhatsApp chat data analysis and visualization
+## **3. WhatsApp Chat Analysis** -> [ML_Exp_3_WpAnalysis](Lab/ML_Exp_3_WpAnalysis)
 
+### 🔹 **Text Processing + NLP + Streamlit Dashboard + Temporal Analysis + Emoji Detection**
 
+<details>
+<summary><b>📌 My Learnings for Text Analytics & Interactive Dashboards</b></summary>
 
-## **4. ML Experiment 4** -> [ML_Exp_4](Lab/ML_Exp_4.ipynb)
+### 📖 What this project covers:
+- WhatsApp chat export and raw text preprocessing
+- Username and message separation from timestamps
+- Time feature extraction (year, month, day, hour for temporal breakdown)
+- Streamlit interactive dashboard with user/group filtering
+- Core statistics: total messages, word count, media link tracking
+- Most active users analysis (bar charts, pie charts with contribution %)
+- WordCloud generation for visual word frequency representation
+- Stop word removal (English + custom Hindi stop words) and text cleaning
+- Emoji extraction and frequency analysis
+- Monthly and daily timeline visualizations (line plots)
+- Peak activity detection: busiest days and months
+- Heatmap for identifying activity peaks by day × hour
 
+### 🧠 Key Learnings:
+- WhatsApp data export requires careful text parsing (timestamps, usernames, messages)
+- Time feature extraction enables rich temporal analysis and trend discovery
+- Streamlit dashboards make complex analyses accessible to non-technical users
+- Filtering and grouping by user reveals participation patterns
+- WordCloud provides visual insight into conversation focus areas
+- Stop word removal significantly improves keyword relevance
+- Emoji analysis adds cultural/sentiment dimension to text analysis
+- Heatmaps effectively reveal behavioral patterns across dimensions (day × hour)
+- Interactive dashboards require responsive filtering and instant re-computation
 
+### 🎯 Key Takeaway:
+**Text preprocessing + interactive visualization transforms raw chat data into actionable group insights. Dashboards make analytics accessible and exploratory analysis engaging.**
 
-## **5. Heart Disease Risk Prediction** -> [ML_Exp_5](Lab/ML_Exp_5.ipynb)  
-Kaggle Playground Competition (2026)
-
-### Key Work:
-- Data preprocessing & EDA
-- Feature engineering on healthcare data
-- Stratified K-Fold Cross Validation
-- Model comparison: XGBoost, LightGBM, CatBoost
-- Log-loss evaluation
-- Ensembling & blending
+</details>
 
 ---
 
-## **6. Olympic Data Analysis** -> [ML_Exp_6](Lab/ML_Exp_6.ipynb)  
-- Exploratory Data Analysis on Olympic dataset  
-- Trends in nations & events over time  
-- Country-wise medal analysis  
+## **4. Binary Classification with Bank Dataset** -> [ML_Exp_4](Lab/ML_Exp_4.ipynb)
+
+### 🔹 **Tabular Binary Classification + Feature Engineering + Stratified K-Fold + ROC-AUC Optimization**
+
+<details>
+<summary><b>📌 My Learnings for Tabular Classification</b></summary>
+
+### 📖 What this notebook covers:
+- Binary classification on bank marketing dataset
+- Data loading and exploratory analysis
+- Categorical encoding via LabelEncoder (applied on combined train+test)
+- Train-validation split with stratification
+- LightGBM classifier with hyperparameter tuning
+- Feature engineering: ratio features (balance/age), intensity metrics, engagement metrics
+- Stratified 5-fold cross-validation for robust evaluation
+- ROC-AUC as main evaluation metric
+- Hyperparameter optimization (learning_rate, max_depth, num_leaves)
+- Submission generation with probability predictions
+
+### 🧠 Key Learnings:
+- Encoding consistency: encode train+test together to prevent unseen categories
+- Feature engineering from domain knowledge significantly improves performance
+- Stratified K-Fold ensures target distribution is consistent across folds
+- ROC-AUC focuses on ranking quality, not calibration
+- Hyperparameter tuning (max_depth, learning_rate) balances bias-variance
+- LightGBM is efficient on tabular data with many rows
+- Validation strategy prevents leakage and enables realistic performance estimates
+- Probability predictions enable leaderboard climbing via threshold adjustment
+
+### 🎯 Key Takeaway:
+**Tabular classification succeeds through smart encoding + domain-driven feature engineering + proper validation strategy. ROC-AUC optimization requires understanding ranking vs. calibration.**
+
+</details>
 
 ---
 
-## **7. Agentic AI - Planning, Research & Blog Generation** -> [ML_Exp_7](Lab/ML_Exp_7_AgenticAI)
+## **5. Heart Disease Prediction (CatBoost, XGBoost, LightGBM)** -> [ML_Exp_5](Lab/ML_Exp_5.ipynb)
+
+### 🔹 **Multi-Model Comparison + Stratified K-Fold + Log-Loss Evaluation + Blending/Ensembling**
+
+<details>
+<summary><b>📌 My Learnings for Ensemble Methods & Multi-Model Evaluation</b></summary>
+
+### 📖 What this notebook covers:
+- Heart disease binary classification (Kaggle Playground Series)
+- Data preprocessing and column normalization
+- Categorical variable identification and separation
+- One-hot encoding via ColumnTransformer within Pipelines
+- Stratified 5-fold cross-validation
+- Multi-model comparison: Random Forest, XGBoost, LightGBM, CatBoost
+- Out-of-fold (OOF) predictions for blending
+- Log-loss as evaluation metric (probabilistic calibration focus)
+- Ensemble blending: weighted average (40% CatBoost + 30% XGBoost + 30% LightGBM)
+- Final model training on full data for submission
+
+### 🧠 Key Learnings:
+- Stratified K-Fold ensures class balance across folds
+- Pipelines prevent data leakage by bundling preprocessing + modeling
+- Out-of-fold predictions enable parameter-free blending
+- Log-loss rewards well-calibrated probabilities, not just ranking
+- CatBoost handles categorical features natively without encoding
+- Ensemble blending combines diverse model strengths and reduces variance
+- Weighted blending outperforms unweighted averaging
+- Training final model on full data maximizes available information
+- Kaggle competitions drive systematic model selection and validation
+
+### 🎯 Key Takeaway:
+**Multi-model ensembling with OOF blending + stratified K-Fold + log-loss evaluation creates robust, well-calibrated classifiers. Diversity in ensemble members matters more than individual model strength.**
+
+</details>
+
+---
+
+## **6. Olympic Data Analysis** -> [ML_Exp_6](Lab/ML_Exp_6.ipynb)
+
+### 🔹 **Exploratory Data Analysis + Temporal Trends + Aggregation & Pivoting + Interactive Visualization**
+
+<details>
+<summary><b>📌 My Learnings for EDA & Data Storytelling</b></summary>
+
+### 📖 What this notebook covers:
+- Olympic athlete_events dataset with country region mapping
+- Data preprocessing: filtering Summer Olympics, merging, deduplication, one-hot encoding medals
+- Summary statistics: editions, cities, sports, events, athletes, nations
+- Temporal analysis: participating nations trend, events growth over time
+- Heatmap visualization: sports × year event frequency
+- Country-specific performance: medal tally over years, most successful athletes
+- Athlete demographics: age distribution (overall vs gold medalists)
+- Physical attributes: height vs weight scatter by medal status and gender
+- Gender participation trends: male vs female athletes over decades
+- Helper functions for medal tally, heatmaps, athlete filtering
+
+### 🧠 Key Learnings:
+- Preprocessing must handle deduplication carefully for temporal analysis
+- Temporal line plots reveal growth trends and plateau points
+- Heatmaps effectively show sport diversification across time periods
+- Country-specific filtering enables comparative performance analysis
+- Aggregations (groupby, pivot_table) transform granular data into insights
+- Gender and demographics analysis reveals historical participation shifts
+- Plotly interactive visualizations engage audiences better than static plots
+- Helper functions modularize analysis for reusability
+
+### 🎯 Key Takeaway:
+**Systematic EDA with temporal analysis + demographic breakdowns transforms raw Olympic data into rich historical insights. Modularized helper functions enable flexible, reusable analysis pipelines.**
+
+</details>
+
+---
+## **7. Agentic AI Experiment** -> [ML_Exp_7](Lab/ML_Exp_7)
 
 ### 🔹 **LangGraph + Planning Agent + Orchestrator-Worker Pattern + Multi-Modal Content**
 
@@ -86,16 +262,43 @@ Kaggle Playground Competition (2026)
 
 </details>
 
-
 ---
 
-## **8. MNIST Classification + SVM + PCA** -> [ML_Exp_8](Lab/ML_Exp_8.ipynb)  
-- Pixel normalization
-- Models: Decision Tree, Linear SVM, RBF SVM
-- Evaluation using accuracy & confusion matrix
-- Support vector analysis
-- PCA dimensionality reduction
-- Kaggle submission
+## **8. MNIST Classification: SVM + Decision Trees + PCA** -> [ML_Exp_8](Lab/ML_Exp_8.ipynb)
+
+### 🔹 **Multiclass Classification + SVM Kernels + Dimensionality Reduction + Support Vector Analysis**
+
+<details>
+<summary><b>📌 My Learnings for Kernel Methods & Multiclass SVM</b></summary>
+
+### 📖 What this notebook covers:
+- MNIST digit recognition (scikit-learn compatible format)
+- Pixel normalization: 0-255 → 0-1 range for neural-network-style preprocessing
+- Train-validation split (80-20) with stratification
+- Multiple classifiers: Decision Tree, Linear SVM, RBF SVM
+- Confusion matrix and classification reports for multiclass evaluation
+- Support vector analysis: kernel-specific support vector counts and shapes
+- Decision function shape inspection for multiclass strategy (one-vs-rest)
+- PCA dimensionality reduction: 784 features → 50 components
+- SVM + PCA pipeline: maintaining accuracy after aggressive feature reduction
+- Kaggle submission generation with ImageId and Label columns
+- Comparative accuracy table: Tree (85%) → Lin SVM (93%) → RBF SVM (97%) → RBF+PCA (97.8%)
+
+### 🧠 Key Learnings:
+- Pixel normalization improves model training and convergence
+- Decision Trees baseline provides quick performance reference
+- Linear SVM creates simpler decision boundaries with fewer support vectors
+- RBF kernel maps data to higher dimensions via kernel trick, enabling non-linear separation
+- Support vector count increases with kernel complexity (RBF > Linear)
+- One-vs-rest strategy extends binary SVM to multiclass (10 classes for MNIST)
+- PCA dramatically reduces features while preserving predictive power
+- RBF + PCA achieves 97.8% accuracy despite 99.4% feature reduction
+- Kaggle digit classification is ideal for kernel method experimentation
+
+### 🎯 Key Takeaway:
+**Kernel methods (especially RBF SVM) excel at multiclass image classification through non-linear feature transformation. Dimensionality reduction via PCA proves that pixel redundancy is high—most information concentrates in top principal components.**
+
+</details>
 
 ---
 
