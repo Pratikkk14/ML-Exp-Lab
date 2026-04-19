@@ -52,6 +52,43 @@ Kaggle Playground Competition (2026)
 
 ---
 
+## **7. Agentic AI - Planning, Research & Blog Generation** -> [ML_Exp_7](Lab/ML_Exp_7_AgenticAI)
+
+### 🔹 **LangGraph + Planning Agent + Orchestrator-Worker Pattern + Multi-Modal Content**
+
+<details>
+<summary><b>📌 My Learnings for Agentic AI Systems</b></summary>
+
+### 📖 What this project covers:
+- Planning-based agent architecture (multi-phase workflow)
+- Orchestrator-Worker pattern with parallel execution
+- LLM-based Router for conditional path selection
+- Research integration via Tavily API
+- Evidence pack construction and synthesis
+- Pydantic schemas for type-safe state management
+- Reducer node for intelligent output stitching
+- Automated image generation and placement (Gemini)
+- Multi-modal blog post generation
+- Streamlit UI integration for production deployment
+
+### 🧠 Key Learnings:
+- Multi-phase planning enables complex task decomposition
+- Orchestrator-Worker parallelization reduces latency 3-5x
+- Dynamic routing adapts execution strategy to query requirements
+- Real-time research via Tavily addresses hallucination and knowledge cutoff
+- Pydantic schemas ensure type-safe state transitions in LangGraph
+- Reducer pattern intelligently synthesizes parallel outputs
+- Multi-modal generation requires content-aware image placement
+- Streamlit enables rapid production deployment of complex backends
+
+### 🎯 Key Takeaway:
+**LangGraph transforms LLM calls into production-grade agentic workflows with planning, research, parallelization, and multi-modal generation—enabling sophisticated problem-solving beyond simple prompting.**
+
+</details>
+
+
+---
+
 ## **8. MNIST Classification + SVM + PCA** -> [ML_Exp_8](Lab/ML_Exp_8.ipynb)  
 - Pixel normalization
 - Models: Decision Tree, Linear SVM, RBF SVM
@@ -95,6 +132,36 @@ Kaggle Playground Competition (2026)
 </details>
 
 ---
+
+## **10. SVD for Document Topic Discovery (LSA)** -> [ML_Exp_10](Lab/ML_Exp_10.ipynb)
+
+### 🔹 **TF-IDF Vectorization + TruncatedSVD + LSA + Clustering Evaluation**
+
+<details>
+<summary><b>📌 My Learnings for SVD & Topic Discovery</b></summary>
+
+### 📖 What this notebook covers:
+- 20 Newsgroups dataset (3 categories)
+- TF-IDF vectorization (10,000 features)
+- TruncatedSVD with multiple component settings:
+  - 50, 100, 200 components
+- KMeans clustering (k=3)
+- Explained variance analysis
+- Silhouette score evaluation
+- Latent topic interpretation (top 10 terms per topic)
+
+### 🧠 Key Learnings:
+- SVD achieves 50-200x compression while preserving semantics
+- TruncatedSVD exploits sparsity in text data efficiently
+- Component count affects clustering quality trade-off
+- LSA successfully extracts human-interpretable topics
+- Explained variance helps identify optimal dimensionality
+- Silhouette scores validate cluster coherence
+
+### 🎯 Key Takeaway:
+**SVD transforms high-dimensional sparse text into interpretable semantic dimensions for efficient document clustering and topic discovery.**
+
+</details>
 
 
 <h1 style="margin-top:50px; margin-bottom:40px;" id="theory-experiments-index">THEORY EXPERIMENTS INDEX</h1>
