@@ -228,7 +228,7 @@
 </details>
 
 ---
-## **7. Agentic AI Experiment** -> [ML_Exp_7](Lab/ML_Exp_7)
+## **7. Agentic AI Experiment** -> [ML_Exp_7](Lab/ML_Exp_7_AgenticAI)
 
 ### 🔹 **LangGraph + Planning Agent + Orchestrator-Worker Pattern + Multi-Modal Content**
 
@@ -371,33 +371,170 @@
 
 
 
-## **1. Classification Pipeline + Generalization Error** -> [ML_Theory_01](Theory/ML_Theory_01.ipynb)  
+## **1. Predict Breast Cancer Diagnosis (Classification Pipeline + Generalization Error)** -> [ML_Theory_01](Theory/ML_Theory_01.ipynb)
 
-- Logistic Regression & Decision Tree
-- Breast Cancer dataset
-- Full ML workflow
-- Generalization error analysis
+### 🔹 **Logistic Regression + Decision Tree + Generalization Gap + Error Analysis**
+
+<details>
+<summary><b>📌 My Learnings for Classification Workflow & Generalization</b></summary>
+
+### 📖 What this notebook covers:
+- Breast Cancer Wisconsin Diagnostic dataset classification (Malignant vs Benign)
+- End-to-end supervised ML workflow:
+  - problem framing
+  - preprocessing
+  - model training
+  - evaluation and error analysis
+- Train/test splitting with fixed random seed and controlled test size
+- Baseline model: Logistic Regression
+- Non-linear model: Decision Tree classifier
+- Performance reporting:
+  - Train error and Test error
+  - Generalization gap (train vs test performance)
+  - Accuracy, Precision, Recall, F1-score
+  - Confusion matrix
+- Practical ML risk analysis:
+  - scaling requirements
+  - data leakage prevention
+  - class imbalance awareness
+  - feature correlation effects
+
+### 🧠 Key Learnings:
+- Generalization error is the most important indicator beyond training accuracy
+- Logistic Regression provides a strong, interpretable baseline
+- Decision Trees can overfit if depth and complexity are not controlled
+- Comparing train vs test metrics quickly reveals overfitting/underfitting
+- Confusion matrix adds class-wise diagnostic depth beyond scalar metrics
+- Proper preprocessing and leakage control are essential for reliable conclusions
+
+### 🎯 Key Takeaway:
+**A complete classification pipeline is not just about model fitting. Reliable generalization requires careful preprocessing, error-gap analysis, and metric-driven diagnosis of model behavior.**
+
+</details>
 
 ---
 
-## **3. Logistic Regression + Performance Metrics** -> [ML_Theory_03](Theory/ML_Theory_03.ipynb)  
+## **3. Predict Term Deposit Subscription using Logistic Regression** -> [ML_Theory_03](Theory/ML_Theory_03.ipynb)
 
-- Binary classification (Bank Marketing dataset)
-- Encoding & preprocessing
-- Evaluation:
+### 🔹 **Binary Classification + ROC-AUC + Threshold Tuning + Professional Metrics**
+
+<details>
+<summary><b>📌 My Learnings for Logistic Regression Evaluation</b></summary>
+
+### 📖 What this notebook covers:
+- UCI Bank Marketing binary classification (`y`: yes/no term deposit subscription)
+- Categorical feature encoding and preprocessing pipeline
+- Train/test split with reproducible random seed
+- Logistic Regression model training and probability prediction
+- Professional metric reporting:
   - Confusion Matrix
-  - Precision, Recall, F1
+  - Precision, Recall, F1-score
+  - Sensitivity (Recall) and Specificity
   - ROC-AUC
-- Threshold analysis
+- Threshold analysis at:
+  - default threshold (0.5)
+  - optimized threshold selected by metric trade-off
+- Prediction export file format:
+  - `probabilities.csv` with record id, probability, predicted label
+
+### 🧠 Key Learnings:
+- Accuracy alone is insufficient for imbalanced or cost-sensitive decisions
+- ROC-AUC evaluates ranking quality independent of a single threshold
+- Threshold tuning changes precision-recall balance based on business objective
+- Specificity complements recall when false positives have operational cost
+- Logistic Regression remains a strong baseline for calibrated binary probabilities
+
+### 🎯 Key Takeaway:
+**The value of Logistic Regression comes from robust probability outputs and threshold-aware decisioning, not just default 0.5 classification.**
+
+</details>
 
 ---
 
-## **6. Spam Detection (Ensemble Learning)** -> [ML_Theory_06](Theory/ML_Theory_06.ipynb)
+## **4. Bike Demand Forecasting: Subagging vs Bagging vs Boosting** -> [ML_Theory_4](Theory/ML_Theory_4.ipynb)
 
-- TF-IDF vectorization
-- Ensemble methods (Voting, Stacking)
-- Stratified K-Fold validation
-- Performance evaluation
+### 🔹 **Ensemble Regression + K-Fold CV + RMSE/MAE Comparison + Bias-Variance Analysis**
+
+<details>
+<summary><b>📌 My Learnings for Ensemble Regression</b></summary>
+
+### 📖 What this notebook covers:
+- Bike rental demand prediction using UCI Bike Sharing `hour.csv`
+- Regression target setup: `cnt` (hourly rental count)
+- Feature preparation by dropping leakage-style columns (`instant`, `dteday`, `casual`, `registered`)
+- 5-fold cross-validation using `KFold(n_splits=5, shuffle=True, random_state=42)`
+- Evaluation metrics with variability tracking:
+  - RMSE mean and standard deviation
+  - MAE mean and standard deviation
+- Model comparison across ensemble paradigms:
+  - Bagging: `RandomForestRegressor`
+  - Subagging: `BaggingRegressor` with `max_samples=0.6`
+  - Boosting: `GradientBoostingRegressor`
+- Hyperparameter impact discussion:
+  - RF: `n_estimators`, `max_depth`
+  - Subagging: `max_samples`, `n_estimators`
+  - Boosting: `learning_rate`, `n_estimators`
+- Output file generation:
+  - `cv_regression_results.csv`
+  - `final_predictions.csv` (`ActualCnt`, `PredictedCnt`)
+- Feature importance extraction and top-8 feature listing from best tree-based model
+- Report section interpreting best generalizing model using bias-variance intuition
+
+### 🧠 Key Learnings:
+- K-Fold CV gives more reliable generalization estimates than a single split
+- RMSE and MAE together provide balanced error interpretation
+- Random Forest reduces variance via averaging many trees
+- Subagging (`max_samples < 1.0`) increases diversity but can introduce more bias
+- Gradient Boosting improves performance by sequentially correcting residual errors
+- `learning_rate` and `n_estimators` jointly control boosting strength vs overfitting risk
+- Feature importance helps explain model behavior and demand drivers
+- Bias-variance framing improves model selection clarity beyond raw metric values
+
+### 🎯 Key Takeaway:
+**For this bike-demand regression task, boosting generalizes best because it balances bias and variance through staged error correction, while bagging methods primarily target variance reduction.**
+
+</details>
+
+---
+
+## **6. SMS Spam Classification using Ensemble Combination** -> [ML_Theory_06](Theory/ML_Theory_06.ipynb)
+
+### 🔹 **TF-IDF + Voting (Hard/Soft) + Stacking + AdaBoost Stumps + Stratified K-Fold**
+
+<details>
+<summary><b>📌 My Learnings for Classifier Combination Strategies</b></summary>
+
+### 📖 What this notebook covers:
+- SMS Spam Collection text classification (Spam vs Ham)
+- Text preprocessing and TF-IDF feature extraction
+- Stratified 5-fold cross-validation for robust model comparison
+- Base learner benchmarking (for example: Naive Bayes, Logistic Regression, Linear SVM)
+- Ensemble combination methods:
+  - Hard Voting classifier
+  - Soft Voting classifier
+  - Stacking classifier (meta-learner: Logistic Regression)
+- Boosting baseline with decision stumps:
+  - AdaBoost + DecisionTree depth=1
+- Metric reporting:
+  - Confusion Matrix
+  - Precision, Recall, F1-score
+  - ROC-AUC
+- Output artifacts:
+  - `ensemble_comparison.csv`
+  - `final_model_predictions.csv` (message id, actual, predicted, probability)
+
+### 🧠 Key Learnings:
+- TF-IDF transforms sparse text into effective numerical signals
+- Stratified K-Fold is critical when class distributions are imbalanced
+- Soft voting can outperform hard voting by leveraging probability confidence
+- Stacking learns complementary strengths across diverse base models
+- AdaBoost stumps provide a strong bias-controlled boosting baseline
+- Best ensemble choice depends on both metric performance and interpretability
+
+### 🎯 Key Takeaway:
+**Combining classifiers usually outperforms single models in spam detection, especially when strong text features (TF-IDF) are paired with probability-aware ensembling and stratified validation.**
+
+</details>
 
 
 ---
