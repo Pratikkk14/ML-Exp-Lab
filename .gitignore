@@ -1,1 +1,9 @@
 myvenv/
+venv/
+__pycache__/
+*.pyc
+models
+normal
+opacity
+output
+uploads
